@@ -92,6 +92,8 @@ inoremap ! !<C-g>u
 " repeating the `find` action
 noremap \ ;<left><right>
 
+inoremap < <><left>
+
 " folding
 noremap <A-[> :foldopen<CR>
 noremap <A-]> :foldclose<CR>
