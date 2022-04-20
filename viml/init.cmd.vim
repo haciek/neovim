@@ -18,9 +18,6 @@ autocmd! BufEnter * silent! lcd %:p:h
 " formating latex to pdf
 autocmd! BufWritePost *.tex silent !/usr/bin/pdflatex %
 
-" noexpandtab doesn't work properly in rust files
-autocmd! BufRead,BufNewFile *.rs silent setlocal noexpandtab
-
 " autoclosing HTML tags
 autocmd! FileType html set omnifunc=htmlcomplete#CompleteTags
 

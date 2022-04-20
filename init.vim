@@ -1,4 +1,3 @@
-
 " ~< Plugin List >~ "
 source $XDG_CONFIG_HOME/nvim/plugin/init.plug.vim
 
@@ -32,7 +31,7 @@ function PlugSource()
 endfunction
 
 " ~< Unused >~ "
-	" source $XDG_CONFIG_HOME/nvim/plugin/plug.coc.vim
+" source $XDG_CONFIG_HOME/nvim/plugin/plug.coc.vim
 " source $XDG_CONFIG_HOME/nvim/plugin/plug.easy-align.vim
 " source $XDG_CONFIG_HOME/nvim/viml/plug.completion.vim
 " source $XDG_CONFIG_HOME/nvim/viml/plug.godot.vim

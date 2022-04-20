@@ -18,9 +18,6 @@ tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
 tnoremap <A-l> <C-\><C-N><C-w>l
 
-" fast clear for the terminal
-tnoremap <leader>l <Enter>clear<CR>
-
 " remap escape (terminal)
 tnoremap <leader><Esc> <C-\><C-n>
 
@@ -94,6 +91,4 @@ noremap \ ;<left><right>
 
 inoremap < <><left>
 
-" folding
-noremap <A-[> :foldopen<CR>
-noremap <A-]> :foldclose<CR>
+noremap <leader><Tab> :exec "!$TERMINAL &"<CR>
