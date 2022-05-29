@@ -1,12 +1,10 @@
 #pragma once
-#ifndef <++>
-#define <++>
+#ifndef FILE_H
+#define FILE_H
 
-class <++> {
+class class_h {
 	private:
-		<++>
 	public:
-		<++>
 };
 
-#endif /* end of include guard */
+#endif 

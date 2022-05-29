@@ -12,31 +12,24 @@ noremap <A-h> <C-w>h
 noremap <A-j> <C-w>j
 noremap <A-k> <C-w>k
 noremap <A-l> <C-w>l
-" window navigation (terminal)
-tnoremap <A-h> <C-\><C-N><C-w>h
-tnoremap <A-j> <C-\><C-N><C-w>j
-tnoremap <A-k> <C-\><C-N><C-w>k
-tnoremap <A-l> <C-\><C-N><C-w>l
-
-" remap escape (terminal)
-tnoremap <leader><Esc> <C-\><C-n>
 
 " goes to a file even if it doesn't exist
-noremap gf :e <cfile><cr>
+noremap gf :e <cfile><CR>
 
 " moving whole lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
 
-" better (less annoying) line concatenation
+" less annoying line concatenation
 nnoremap J mmJ`m;
 
 " re-highlighting visual selection
 vnoremap > >gv
 vnoremap < <gv
 
-" puts ; at the end of the line
+" puts characters at the end of the line
 noremap <leader>; <Esc>mmA;<Esc>`m
+noremap ,, <Esc>mmA,<Esc>`m
 
 " indent everything
 noremap <leader>= <Esc>mmgg=G<Esc>`m
@@ -64,21 +57,17 @@ nnoremap <leader>H :split<CR>
 nnoremap <leader>h :vsplit<CR>
 
 " moving window splits
-nnoremap <A-y> <C-w>J
-nnoremap <A-u> <C-w>K
-nnoremap <A-i> <C-w>H
-nnoremap <A-o> <C-w>L
+nnoremap <C-j> <C-w>J
+nnoremap <C-k> <C-w>K
+nnoremap <C-h> <C-w>H
+nnoremap <C-l> <C-w>L
 
-" vertical split resizing
+" resizing splits
 nnoremap <A-,> :winc <<CR>
 nnoremap <A-.> :winc ><CR>
 nnoremap <A-+> :winc =<CR>
-" split resizing
 nnoremap <A--> :winc -<CR>
 nnoremap <A-=> :winc +<CR>
-
-" find and insert at <++> (useful for macros)
-" nnoremap <space><space> <Esc>/<++><Enter>"_c4l
 
 " breakpoints for undo.
 inoremap . .<C-g>u
@@ -88,7 +77,15 @@ inoremap ! !<C-g>u
 
 " repeating the `find` action
 noremap \ ;<left><right>
-
-inoremap < <><left>
-
 noremap <leader><Tab> :exec "!$TERMINAL &"<CR>
+
+" autoclose
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ` ``<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap < <><left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {; {<CR>};<ESC>O
