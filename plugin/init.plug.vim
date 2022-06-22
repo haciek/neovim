@@ -34,11 +34,14 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-vsnip'
 	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
+	Plug 'rafamadriz/friendly-snippets'
 
 	" ~< Diagnostics >~ "
 	Plug 'dstein64/vim-startuptime'
 
 	" ~< Themes >~ "
+	Plug 'KabbAmine/yowish.vim'
 	Plug 'tyrannicaltoucan/vim-quantum'
 	Plug 'sainnhe/sonokai'
 	Plug 'joshdick/onedark.vim'
@@ -51,7 +54,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'AndrewRadev/splitjoin.vim'
-
+	Plug 'folke/which-key.nvim'
+	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'NvChad/nvterm'
+    Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 	" ~< Unused >~ "
 	" Plug 'mfussenegger/nvim-dap'
 	" Plug 'vim-scripts/tComment'

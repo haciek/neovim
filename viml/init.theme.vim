@@ -13,4 +13,4 @@ let g:tokyonight_enable_italic=1
 let g:tokyonight_current_word='italic'
 let g:tokyonight_menu_selection_background='red'
 
-colorscheme quantum
+colorscheme tokyonight

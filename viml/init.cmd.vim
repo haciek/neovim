@@ -21,9 +21,6 @@ autocmd! FileType lua set expandtab shiftwidth=3 tabstop=4 softtabstop=3 nolist
 autocmd! FileType vim set expandtab shiftwidth=4 tabstop=4 softtabstop=4 nolist
 autocmd! FileType rust set noexpandtab shiftwidth=3 tabstop=3 softtabstop=3
 
-autocmd! InsertEnter * set nocursorline nocursorcolumn
-autocmd! InsertLeave * set cursorline
-
 " ~< commads >~
 command! Reload :so $XDG_CONFIG_HOME/nvim/init.vim
 " opens a pdf (for latex and groff)

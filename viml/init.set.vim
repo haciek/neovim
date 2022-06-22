@@ -30,7 +30,8 @@ set wrap
 " set cursorline
 " set cursorcolumn
 
-set list listchars=tab:│\ ,space:· lcs=tab:│\ ,space:·
+set list listchars=tab:│\  lcs=tab:│\ ,
+" set list listchars=tab:│\ ,space:· lcs=tab:│\ ,space:·
 
 " autocmd! BufEnter *.rs setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 
