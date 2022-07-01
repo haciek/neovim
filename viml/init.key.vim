@@ -1,33 +1,33 @@
 " key leader
 let mapleader=" "
 " dvorak
-" nnoremap h h|xnoremap h h|onoremap h h|
-" nnoremap t j|xnoremap t j|onoremap t j|
-" nnoremap n k|xnoremap n k|onoremap n k|
-" nnoremap s l|xnoremap s l|onoremap s l|
-" nnoremap T J|xnoremap T J|onoremap T J|
-" nnoremap N K|xnoremap N K|onoremap N K|
-
-" noremap <A-h> <C-w>h
-" noremap <A-t> <C-w>j
-" noremap <A-n> <C-w>k
-" noremap <A-s> <C-w>l
+nnoremap h h|xnoremap h h|onoremap h h
+nnoremap t j|xnoremap t j|onoremap t j
+nnoremap n k|xnoremap n k|onoremap n k
+nnoremap s l|xnoremap s l|onoremap s l
+nnoremap T J|xnoremap T J|onoremap T J
+nnoremap N K|xnoremap N K|onoremap N K
 
 noremap <A-h> <C-w>h
-noremap <A-j> <C-w>j
-noremap <A-k> <C-w>k
-noremap <A-l> <C-w>l
+noremap <A-t> <C-w>j
+noremap <A-n> <C-w>k
+noremap <A-s> <C-w>l
+
+" noremap <A-h> <C-w>h
+" noremap <A-j> <C-w>j
+" noremap <A-k> <C-w>k
+" noremap <A-l> <C-w>l
 
 " ~< Bufferline >~ "
-nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
-nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
-nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
-nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
-nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
-nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
-nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
-nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
-nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
+" nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
+" nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
+" nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
+" nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
+" nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
+" nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
+" nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
+" nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
+" nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 
 " ~< LSP >~ "
 nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<CR>

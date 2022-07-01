@@ -17,9 +17,7 @@ require("nvterm").setup({
 
 local terminal = require("nvterm.terminal")
 
-local ft_cmds = {
-  python = "python3 " .. vim.fn.expand('%'),
-}
+local ft_cmds = { python = "python3 " .. vim.fn.expand('%') }
 local toggle_modes = {'n', 't'}
 local mappings = {
   { 'n', '<C-l>', function () require("nvterm.terminal").send(ft_cmds[vim.bo.filetype]) end },

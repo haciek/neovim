@@ -1,10 +1,5 @@
 local actions = require('telescope.actions')
 require('telescope').load_extension('fzy_native')
--- local builtin = require('telescope.builtin')
--- local themes = require('telescope.themes')
--- builtin.find_files(themes.get_ivy())
--- builtin.find_files(themes.get_dropdown())
--- builtin.lsp_references(themes.get_cursor())
 require('telescope').setup{
 
 	defaults = {

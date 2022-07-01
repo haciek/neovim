@@ -26,6 +26,8 @@ set smartcase
 set nohlsearch
 set incsearch
 set wrap
+set winbar=%=%f
+set laststatus=3
 
 " set cursorline
 " set cursorcolumn

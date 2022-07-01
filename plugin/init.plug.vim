@@ -57,7 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'folke/which-key.nvim'
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'NvChad/nvterm'
-    Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+    " Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 	" ~< Unused >~ "
 	" Plug 'mfussenegger/nvim-dap'
 	" Plug 'vim-scripts/tComment'
