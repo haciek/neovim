@@ -25,3 +25,5 @@ autocmd! FileType rust set noexpandtab shiftwidth=3 tabstop=3 softtabstop=3
 command! Reload :so $XDG_CONFIG_HOME/nvim/init.vim
 " opens a pdf (for latex and groff)
 command! PreviewPdf !zathura $(echo % | sed 's/\..*$/.pdf/')& disown
+
+command! Format lua vim.lsp.buf.formatting_sync(nil, 100)

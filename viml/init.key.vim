@@ -1,6 +1,6 @@
 " key leader
 let mapleader=" "
-" dvorak
+
 nnoremap h h|xnoremap h h|onoremap h h
 nnoremap t j|xnoremap t j|onoremap t j
 nnoremap n k|xnoremap n k|onoremap n k
@@ -13,35 +13,18 @@ noremap <A-t> <C-w>j
 noremap <A-n> <C-w>k
 noremap <A-s> <C-w>l
 
-" noremap <A-h> <C-w>h
-" noremap <A-j> <C-w>j
-" noremap <A-k> <C-w>k
-" noremap <A-l> <C-w>l
+" moving window splits
+nnoremap <C-h> <C-w>H
+nnoremap <C-t> <C-w>J
+nnoremap <C-n> <C-w>K
+nnoremap <C-s> <C-w>L
 
-" ~< Bufferline >~ "
-" nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
-" nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
-" nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
-" nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
-" nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
-" nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
-" nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
-" nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
-" nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
-
-" ~< LSP >~ "
-nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent>gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent>gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<CR>
-nmap <silent><C-\> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
-command! Format lua vim.lsp.buf.formatting_sync(nil, 100)
-
-nnoremap <leader>' :Telescope find_files<CR>
-nnoremap <leader>, :Telescope buffers<CR>
-nnoremap <leader>. :Telescope current_buffer_fuzzy_find<CR>
+" resizing splits
+nnoremap <A-,> :winc <<CR>
+nnoremap <A-.> :winc ><CR>
+nnoremap <A-=> :winc =<CR>
+nnoremap <A--> :winc -<CR>
+nnoremap <A-+> :winc +<CR>
 
 nmap <leader>c gcc
 vmap <leader>c gcc
@@ -75,18 +58,6 @@ vnoremap < <gv
 noremap ;; <Esc>mmA;<Esc>`m
 noremap ,, <Esc>mmA,<Esc>`m
 
-" moving window splits
-nnoremap <C-j> <C-w>J
-nnoremap <C-k> <C-w>K
-nnoremap <C-h> <C-w>H
-nnoremap <C-l> <C-w>L
-
-" resizing splits
-nnoremap <A-,> :winc <<CR>
-nnoremap <A-.> :winc ><CR>
-nnoremap <A-+> :winc =<CR>
-nnoremap <A--> :winc -<CR>
-nnoremap <A-=> :winc +<CR>
 
 " breakpoints for undo.
 inoremap . .<C-g>u
@@ -103,22 +74,10 @@ inoremap ' ''<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
-" inoremap < <><left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
+" inoremap < <><left>
 " inoremap {; {<CR>};<ESC>O
-
-" disable arrow-keys
-" noremap <Down> <Nop>
-" noremap <Left> <Nop>
-" noremap <Right> <Nop>
-" noremap <Up> <Nop>
-
-" window navigation
-" noremap <A-h> <C-w>h
-" noremap <A-j> <C-w>j
-" noremap <A-k> <C-w>k
-" noremap <A-l> <C-w>l
 
 " add (around the word)
 nmap y" ysiW"
@@ -128,7 +87,6 @@ nmap y( ysiW(
 nmap y[ ysiW[
 nmap y{ ysiW{
 nmap y< ysiW<
-" change
 nmap c" cs"
 nmap c' cs'
 nmap c` cs`
@@ -136,7 +94,6 @@ nmap c( cs(
 nmap c[ cs[
 nmap c{ cs{
 nmap c< cs<
-" delete
 nmap d" ds"
 nmap d' ds'
 nmap d` ds`
@@ -144,3 +101,17 @@ nmap d( ds(
 nmap d[ ds[
 nmap d{ ds{
 nmap d< ds<
+
+" ~< LSP >~ "
+nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent>gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent>K <cmd>lua vim.lsp.buf.hover()<CR>
+nmap <silent><C-\> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
+
+" ~< Telescope >~ "
+nnoremap <leader>' :Telescope find_files<CR>
+nnoremap <leader>, :Telescope buffers<CR>
+nnoremap <leader>. :Telescope current_buffer_fuzzy_find<CR>
