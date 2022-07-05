@@ -1,10 +1,9 @@
 " ~< autocomads >~
-
 " recompiling dwm & dwmblocks
-autocmd! BufWritePost config.def.h !rm -f $(pwd)/config.h && sudo make install
-autocmd! BufWritePost blocks.def.h !rm -f $(pwd)/blocks.h && sudo make install && pkill -x dwmblocks && dwmblocks & disown
+" autocmd! BufWritePost config.def.h !rm -f $(pwd)/config.h && sudo make install
+" autocmd! BufWritePost blocks.def.h !rm -f $(pwd)/blocks.h && sudo make install && pkill -x dwmblocks && dwmblocks & disown
 " restarting sxhkd after changing it
-autocmd! BufWritePost sxhkdrc !pkill -x sxhkd && sxhkd & disown
+" autocmd! BufWritePost sxhkdrc !pkill -x sxhkd && sxhkd & disown
 " center on insert
 autocmd! InsertEnter * norm zz
 " remove trailing whitespaces
@@ -22,8 +21,6 @@ autocmd! FileType vim set expandtab shiftwidth=4 tabstop=4 softtabstop=4 nolist
 autocmd! FileType rust set noexpandtab shiftwidth=3 tabstop=3 softtabstop=3
 
 " ~< commads >~
-command! Reload :so $XDG_CONFIG_HOME/nvim/init.vim
-" opens a pdf (for latex and groff)
+command! Reload :so $XDG_CONFIG_HOME/nvim/init.lua
 command! PreviewPdf !zathura $(echo % | sed 's/\..*$/.pdf/')& disown
-
-command! Format lua vim.lsp.buf.formatting_sync(nil, 100)
+command! Format lua vim.lsp.buf.format(nil, 100)

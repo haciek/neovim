@@ -7,9 +7,9 @@ let g:startify_lists = [
 	\]
 
 let g:startify_bookmarks = [
-	\{ 'v'  : '~/.config/nvim/init.vim' },
+	\{ 'v'  : '~/.config/nvim/init.lua' },
 	\{ 'z'  : '~/.config/zsh/.zshrc' },
-	\{ 'zz' : '~/.zshenv' },
+	\{ 'zz'  : '~/.config/zsh/.zshenv' },
 	\{ 'c'  : '~/code/' },
 	\{ 'cc' : '~/.config/' },
 	\{ 'a'  : '~/.config/awesome/rc.lua' },

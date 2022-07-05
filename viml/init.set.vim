@@ -32,11 +32,11 @@ set laststatus=3
 " set cursorline
 " set cursorcolumn
 
-set list listchars=tab:│\  lcs=tab:│\ ,
 " set list listchars=tab:│\ ,space:· lcs=tab:│\ ,space:·
 
 " autocmd! BufEnter *.rs setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 
+set list listchars=tab:│\  lcs=tab:│\ ,
 set completeopt=menu,menuone,noselect
 
 " set list listchars=tab:\ \ ,space:· lcs=tab:\ \ ,space:·,
