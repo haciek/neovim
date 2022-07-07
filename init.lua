@@ -1,7 +1,7 @@
 
-require('plugins') -- TODO
+require('plugins') 
 require('keymaps')
 require('settings')
-require('commands') -- TODO
-require('templates') --TODO
+require('commands') 
+-- require('templates') --TODO
 require('theme')

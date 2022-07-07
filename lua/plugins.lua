@@ -1,61 +1,60 @@
-vim.cmd([[
-   call plug#begin('~/.config/nvim/plugged')
-       " ~< LSP & Syntax HL >~"
-       Plug 'nvim-treesitter/nvim-treesitter'
-       Plug 'williamboman/nvim-lsp-installer'
-       Plug 'neovim/nvim-lspconfig'
+local Plug = vim.fn['plug#']
 
-       " ~< Telescope >~ "
-       Plug 'nvim-telescope/telescope-fzy-native.nvim'
-       Plug 'nvim-telescope/telescope-symbols.nvim'
-       Plug 'nvim-telescope/telescope.nvim'
-       Plug 'ryanoasis/vim-devicons'
-       Plug 'nvim-lua/plenary.nvim'
-       Plug 'nvim-lua/popup.nvim'
+vim.call('plug#begin', '~/.config/nvim/plugged')
+-- " ~< LSP & Syntax HL >~ "
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
 
-       " ~< Nvim-tree >~ "
-       Plug 'kyazdani42/nvim-tree.lua'
-       Plug 'kyazdani42/nvim-web-devicons'
+-- " ~< Telescope >~ "
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-symbols.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
 
-       " ~< Code-related >~ "
-       Plug 'ray-x/lsp_signature.nvim'
-       Plug 'tpope/vim-surround'
-       Plug 'tpope/vim-commentary'
-       Plug 'windwp/nvim-ts-autotag'
+-- " ~< Nvim-tree >~ "
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 
-       " ~< Rust >~ "
-       Plug 'simrat39/rust-tools.nvim'
+-- " ~< Code-related >~ "
+Plug 'ray-x/lsp_signature.nvim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'windwp/nvim-ts-autotag'
 
-       " ~< Code-completion >~ "
-       Plug 'hrsh7th/cmp-nvim-lsp'
-       Plug 'hrsh7th/cmp-buffer'
-       Plug 'hrsh7th/cmp-path'
-       Plug 'hrsh7th/cmp-cmdline'
-       Plug 'hrsh7th/nvim-cmp'
-       Plug 'hrsh7th/cmp-vsnip'
-       Plug 'hrsh7th/vim-vsnip'
-       Plug 'hrsh7th/vim-vsnip-integ'
-       Plug 'rafamadriz/friendly-snippets'
+-- " ~< Rust >~ "
+Plug 'simrat39/rust-tools.nvim'
 
-       " ~< Diagnostics >~ "
-       Plug 'dstein64/vim-startuptime'
+-- " ~< Code-completion >~ "
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'rafamadriz/friendly-snippets'
 
-       " ~< Themes >~ "
-       Plug 'KabbAmine/yowish.vim'
-       Plug 'tyrannicaltoucan/vim-quantum'
-       Plug 'sainnhe/sonokai'
-       Plug 'joshdick/onedark.vim'
-       Plug 'ghifarit53/tokyonight-vim'
-       Plug 'rafalbromirski/vim-aurora'
-       Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+-- " ~< Diagnostics >~ "
+Plug 'dstein64/vim-startuptime'
 
-       " ~< Other >~ "
-       Plug 'mhinz/vim-startify'
-       Plug 'nvim-lualine/lualine.nvim'
-       Plug 'sheerun/vim-polyglot'
-       Plug 'AndrewRadev/splitjoin.vim'
-       Plug 'folke/which-key.nvim'
-       Plug 'lukas-reineke/indent-blankline.nvim'
-       Plug 'NvChad/nvterm'
-   call plug#end()
-]])
+-- " ~< Themes >~ "
+Plug 'KabbAmine/yowish.vim'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'sainnhe/sonokai'
+Plug 'joshdick/onedark.vim'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'rafalbromirski/vim-aurora'
+
+-- " ~< Other >~ "
+Plug 'mhinz/vim-startify'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'sheerun/vim-polyglot'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'folke/which-key.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'NvChad/nvterm'
+vim.call('plug#end')
