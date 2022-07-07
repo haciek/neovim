@@ -1,6 +1,5 @@
-
-require('plugins') 
+require('plugins')
 require('keymaps')
 require('settings')
-require('commands') 
+require('commands')
 require('theme')
