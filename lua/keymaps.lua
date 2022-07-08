@@ -120,6 +120,7 @@ map("n", "<leader>rn",  "<cmd>lua vim.lsp.buf.rename()<CR>")
 --  ~< Telescope >~
 map("n", "<leader>\'",  ":Telescope find_files<CR>")
 map("n", "<leader>,",   ":Telescope buffers<CR>")
-map("n", "<leader>.",   ":Telescope current_buffer_fuzzy_find<CR>")
+map("n", "<leader>.",   ":Telescope live_grep<CR>")
+map("n", "<leader>;",   ":Telescope <CR>")
 
 map("n", "<leader>a",   ":Alpha <CR>")
