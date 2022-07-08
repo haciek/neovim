@@ -92,7 +92,14 @@ return packer.startup(function(use)
   use 'rafalbromirski/vim-aurora'
 
   -- " ~< Other >~ "
-  use 'mhinz/vim-startify'
+  -- use 'mhinz/vim-startify'
+  use {
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.dashboard'.config)
+      end
+  }
   use 'nvim-lualine/lualine.nvim'
   use 'sheerun/vim-polyglot'
   use 'AndrewRadev/splitjoin.vim'
