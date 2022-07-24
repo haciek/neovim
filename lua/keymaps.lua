@@ -118,9 +118,10 @@ map("n", "K" ,          "<cmd>lua vim.lsp.buf.hover()<CR>",            { silent 
 map("n", "<leader>rn",  "<cmd>lua vim.lsp.buf.rename()<CR>")
 
 --  ~< Telescope >~
-map("n", "<leader>\'",  ":Telescope find_files<CR>")
-map("n", "<leader>,",   ":Telescope buffers<CR>")
-map("n", "<leader>.",   ":Telescope live_grep<CR>")
-map("n", "<leader>;",   ":Telescope <CR>")
+map("n", "<leader>.'",  ":Telescope old_files<CR>")
+map("n", "<leader>f'",  ":Telescope find_files<CR>")
+map("n", "<leader>b",   ":Telescope buffers<CR>")
+map("n", "<leader>g",   ":Telescope current_buffer_fuzzy_find<CR>")
+map("n", "<leader>m",   ":Telescope man_pages<CR>")
 
 map("n", "<leader>a",   ":Alpha <CR>")
