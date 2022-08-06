@@ -84,19 +84,11 @@ return packer.startup(function(use)
   -- " ~< Diagnostics >~ "
   use 'dstein64/vim-startuptime'
 
-  -- " ~< Themes >~ "
-  use 'KabbAmine/yowish.vim'
-  use 'tyrannicaltoucan/vim-quantum'
-  use 'sainnhe/sonokai'
-  use 'joshdick/onedark.vim'
-  use 'ghifarit53/tokyonight-vim'
-  use 'rafalbromirski/vim-aurora'
-
   -- " ~< Other >~ "
   -- use 'mhinz/vim-startify'
   use { 'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
-    config = function () require'alpha'.setup(require'alpha.themes.dashboard'.config) end 
+    config = function () require'alpha'.setup(require'alpha.themes.dashboard'.config) end
   }
   use 'nvim-lualine/lualine.nvim'
   use 'sheerun/vim-polyglot'
@@ -104,6 +96,14 @@ return packer.startup(function(use)
   use 'folke/which-key.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'NvChad/nvterm'
+
+  -- " ~< Themes >~ "
+  use 'ghifarit53/tokyonight-vim'
+  -- use 'KabbAmine/yowish.vim'
+  -- use 'tyrannicaltoucan/vim-quantum'
+  -- use 'sainnhe/sonokai'
+  -- use 'joshdick/onedark.vim'
+  -- use 'rafalbromirski/vim-aurora'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
