@@ -92,8 +92,8 @@ return packer.startup(function(use)
   }
   use 'nvim-lualine/lualine.nvim'
   use 'sheerun/vim-polyglot'
-  use 'AndrewRadev/splitjoin.vim'
-  use 'folke/which-key.nvim'
+  -- use 'AndrewRadev/splitjoin.vim'
+  -- use 'folke/which-key.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'NvChad/nvterm'
 
