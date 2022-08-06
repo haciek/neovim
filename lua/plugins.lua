@@ -40,7 +40,7 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
--- My plugins here
+  -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   -- " ~< LSP & Syntax HL >~ "
@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'windwp/nvim-ts-autotag'
+  use 'pechorin/any-jump.vim'
 
   -- " ~< Rust >~ "
   use 'simrat39/rust-tools.nvim'
@@ -93,12 +94,9 @@ return packer.startup(function(use)
 
   -- " ~< Other >~ "
   -- use 'mhinz/vim-startify'
-  use {
-      'goolord/alpha-nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' },
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.dashboard'.config)
-      end
+  use { 'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function () require'alpha'.setup(require'alpha.themes.dashboard'.config) end 
   }
   use 'nvim-lualine/lualine.nvim'
   use 'sheerun/vim-polyglot'

@@ -1,21 +1,21 @@
 local opt = vim.opt
 local o = vim.o
 
-opt.clipboard      = opt.clipboard + "unnamedplus"
-opt.shortmess      = opt.shortmess + "c"
+opt.clipboard        = opt.clipboard + "unnamedplus"
+opt.shortmess        = opt.shortmess + "c"
 
 o.completeopt      = "menu,menuone,noselect"
 o.wildmode         = "longest,full"
-o.winbar           = "%=%m %f"
+o.winbar           = "%m %f"
 o.listchars        = "tab:│ "
 o.encoding         = "utf-8"
 o.spelllang        = "en_us"
 
 o.updatetime       = 300
 o.numberwidth      = 5
-o.tabstop          = 4
-o.softtabstop      = 4
-o.shiftwidth       = 4
+o.tabstop          = 3
+o.softtabstop      = 3
+o.shiftwidth       = 3
 o.sidescrolloff    = 4
 o.scrolloff        = 4
 o.laststatus       = 3
@@ -32,9 +32,9 @@ o.smartindent      = true
 o.ignorecase       = true
 o.smartcase        = true
 o.incsearch        = true
+o.undofile         = true
 o.wrap             = false
 o.hlsearch         = false
 o.expandtab        = false
 o.writebackup      = false
 o.backup           = false
-

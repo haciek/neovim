@@ -7,7 +7,7 @@ cmd("highlight CursorColumn ctermbg=black")
 cmd("highlight CursorLine ctermbg=black")
 
 o.termguicolors = true
-o.background   = "dark"
+o.background    = "dark"
 
 g.tokyonight_style = 'night'
 g.tokyonight_enable_italic = 1
