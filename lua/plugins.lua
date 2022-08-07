@@ -90,6 +90,13 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function () require'alpha'.setup(require'alpha.themes.dashboard'.config) end
   }
+  -- install without yarn or npm
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use 'nvim-lualine/lualine.nvim'
   use 'sheerun/vim-polyglot'
   -- use 'AndrewRadev/splitjoin.vim'
