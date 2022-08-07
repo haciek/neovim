@@ -39,4 +39,4 @@ My personal neovim config
 
 ### Important
 
-Motion keys are remaped to suit `dvorak` keyboard layout.
+Motion keys are remaped to suit **dvorak** keyboard layout.
