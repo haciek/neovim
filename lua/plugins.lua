@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-symbols.nvim'
   use 'nvim-telescope/telescope.nvim'
-  use 'ryanoasis/vim-devicons'
+  -- use 'ryanoasis/vim-devicons'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
