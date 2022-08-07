@@ -36,3 +36,7 @@ My personal neovim config
 - [indent-blankline.nvim](https://www.githug.com/lukas-reineke/indent-blankline.nvim.git)
 - [nvterm](https://www.githug.com/NvChad/nvterm.git)
 - [tokyonight-vim](https://www.githug.com/ghifarit53/tokyonight-vim.git)
+
+### Important
+
+Motion keys are remaped to suit `dvorak` keyboard layout.
