@@ -130,10 +130,11 @@ noremap("n", "<leader>f", "<cmd>Telescope find_files<CR>")
 noremap("n", "<leader>b", "<cmd>Telescope buffers<CR>")
 noremap("n", "<leader>g", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
 noremap("n", "<leader>m", "<cmd>Telescope man_pages<CR>")
+noremap("n", "<leader>s", "<cmd>Telescope symbols<CR>")
 
 noremap("n", "<leader>a", "<cmd>Alpha <CR>")
 
 noremap("n", "<leader>j", "<cmd>AnyJump<CR>")
 noremap("x", "<leader>j", "<cmd>AnyJumpVisual<CR>")
-noremap("n", "<leader>b", "<cmd>AnyJumpBack<CR>")
+noremap("n", "<leader>jb", "<cmd>AnyJumpBack<CR>")
 noremap("n", "<leader>l", "<cmd>AnyJumpLastResults<CR>")

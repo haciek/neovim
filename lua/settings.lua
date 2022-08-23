@@ -1,8 +1,10 @@
 local opt = vim.opt
 local o = vim.o
 
-opt.clipboard        = opt.clipboard + "unnamedplus"
-opt.shortmess        = opt.shortmess + "c"
+vim.cmd('set clipboard+=unnamedplus')
+vim.cmd('set shortmess+=c')
+vim.cmd('set formatoptions=cro')
+
 
 o.completeopt      = "menu,menuone,noselect"
 o.wildmode         = "longest,full"
