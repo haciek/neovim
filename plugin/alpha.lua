@@ -19,6 +19,7 @@ dashboard.section.buttons.val = {
    dashboard.button( "z", "  Zshrc",           ":e $XDG_CONFIG_HOME/zsh/.zshrc <CR>"),
    dashboard.button( "a", "  Awesome config",  ":e $XDG_CONFIG_HOME/awesome/rc.lua <CR>"),
    dashboard.button( "c", "  Config files",    ":e $XDG_CONFIG_HOME/ <CR>"),
+   dashboard.button( "n", "ﴬ Notes",            ":e $HOME/notes <CR>"),
    dashboard.button( "r", "🦀 Rust projects",   ":Telescope find_files find_command=rg,--ignore,--files,--glob=main.rs cwd=$HOME/code/rust/ <CR>"),
 }
 

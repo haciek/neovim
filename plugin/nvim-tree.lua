@@ -23,11 +23,11 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
       width = 30,
       height = 30,
       hide_root_folder = false,
-      side = "left",
-      preserve_window_proportions = false,
+      side = "right",
+      preserve_window_proportions = true,
       number = false,
       relativenumber = false,
-      signcolumn = "yes",
+      signcolumn = "no",
       mappings = {
          custom_only = false,
          list = {
@@ -117,7 +117,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
    },
    git = {
       enable = true,
-      ignore = true,
+      ignore = false,
       timeout = 400,
    },
    actions = {
