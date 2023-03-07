@@ -3,8 +3,6 @@ local fn = vim.fn
 local g = vim.g
 local opt = vim.opt
 
-g.mapleader = ' '
-
 local function map(mode, shortcut, command, opts)
    local options = { noremap = false }
 
@@ -19,9 +17,6 @@ local function noremap(mode, shortcut, command, opts)
    vim.api.nvim_set_keymap(mode, shortcut, command, options)
 end
 
-noremap("n", "h", "h")
-noremap("x", "h", "h")
-noremap("o", "h", "h")
 noremap("n", "t", "j")
 noremap("x", "t", "j")
 noremap("o", "t", "j")
@@ -42,7 +37,6 @@ noremap("n", "<A-h>", "<C-w>h")
 noremap("n", "<A-t>", "<C-w>j")
 noremap("n", "<A-n>", "<C-w>k")
 noremap("n", "<A-s>", "<C-w>l")
-
 noremap("n", "<C-h>", "<C-w>H")
 noremap("n", "<C-t>", "<C-w>J")
 noremap("n", "<C-n>", "<C-w>K")
@@ -67,9 +61,10 @@ noremap("n", "<leader>q", ":wq<CR>")
 noremap("n", "<leader>Q", ":q!<CR>")
 noremap("n", "<leader>r", ":Reload<CR><CR>")
 noremap("n", "<leader>H", ":split<CR>")
-noremap("n", "<leader>h", ":vsplit<CR>")
+noremap("n", "<leader>v", ":vsplit<CR>")
 noremap("n", "<leader><Tab>", ":exec \"!$TERMINAL &\"<CR>")
 
+noremap("n", "zi", "zizz")
 noremap("v", "J", ":m '>+1<CR>gv=gv")
 noremap("v", "K", ":m '>-2<CR>gv=gv")
 noremap("n", "J", "mmJ`m;")
@@ -115,24 +110,6 @@ map("n", "d[", "ds[")
 map("n", "d{", "ds{")
 map("n", "d<", "ds<")
 
---  ~< LSP >~
-map("n", "<C-\\>", "<cmd>lua vim.lsp.buf.signature_help()<CR>",   { silent = true })
-noremap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>",       { silent = true })
-noremap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>",      { silent = true })
-noremap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>",       { silent = true })
-noremap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>",   { silent = true })
-noremap("n", "K" , "<cmd>lua vim.lsp.buf.hover()<CR>",            { silent = true })
-noremap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-
---  ~< Telescope >~
-noremap("n", "<leader>.", "<cmd>Telescope oldfiles<CR>")
-noremap("n", "<leader>f", "<cmd>Telescope find_files<CR>")
-noremap("n", "<leader>b", "<cmd>Telescope buffers<CR>")
-noremap("n", "<leader>g", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
-noremap("n", "<leader>m", "<cmd>Telescope man_pages<CR>")
-noremap("n", "<leader>s", "<cmd>Telescope symbols<CR>")
-
-noremap("n", "<leader>a", "<cmd>Alpha <CR>")
 
 noremap("n", "<leader>j", "<cmd>AnyJump<CR>")
 noremap("x", "<leader>j", "<cmd>AnyJumpVisual<CR>")

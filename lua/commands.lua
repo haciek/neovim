@@ -21,12 +21,16 @@ autocmd("FileType", {
    })
 
 autocmd("FileType", {
-      pattern = "python",
+      pattern = "python,markdown",
       command = "setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 nolist"
    })
 autocmd("FileType", {
       pattern = "lua",
       command = "setlocal expandtab shiftwidth=3 tabstop=3 softtabstop=3 nolist"
+   })
+autocmd("FileType", {
+      pattern = "c",
+      command = "setlocal noexpandtab shiftwidth=8 tabstop=8 softtabstop=8"
    })
 autocmd("FileType", {
       pattern = "rust",
