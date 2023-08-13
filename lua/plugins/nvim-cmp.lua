@@ -69,7 +69,7 @@ return {
          sources = cmp.config.sources({
             { name = 'nvim_lsp' },
             { name = 'vsnip' }, -- For vsnip users.
-            -- { name = 'luasnip' }, -- For luasnip users.
+            { name = 'luasnip' }, -- For luasnip users.
             -- { name = 'ultisnips' }, -- For ultisnips users.
             -- { name = 'snippy' }, -- For snippy users.
          }, {
@@ -110,7 +110,13 @@ return {
       require('lspconfig')['rust_analyzer'].setup {
          capabilities = capabilities
       }
+      require('lspconfig')['clangd'].setup {
+         capabilities = capabilities
+      }
       require('lspconfig')['tsserver'].setup {
+         capabilities = capabilities
+      }
+      require('lspconfig')['arduino_language_server'].setup {
          capabilities = capabilities
       }
 

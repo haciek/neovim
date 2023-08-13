@@ -21,27 +21,38 @@ return {
       map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
       map("n", "K" , "<cmd>lua vim.lsp.buf.hover()<CR>",          { noremap = true, silent = true })
       map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
+      local lsp_installer = require("nvim-lsp-installer")
+      lsp_installer.on_server_ready(function(server)
+         local opts = {}
+
+         if server.name == "lua_ls" or server.name == "sumeko_lua" then
+            opts = {
+               settings = {
+                  Lua = {
+                     diagnostics = {
+                        globals = { 'vim' }
+                     },
+                     workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        -- library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true}
+                     }
+                  }
+               }
+
+            }
+         end
+         if server.name == "arduino-language-server" then
+            cmd = {
+               "arduino-language-server",
+               "-cli-config", "/home/haciek/.arduino15/arduino-cli.yaml",
+               "-fqbn", "arduino:uvr:uno",
+               "-cli", "/usr/bin/arduino-cli",
+               "-clangd", "/usr/bin/clangd"
+            }
+         end
+
+         server:setup(opts)
+      end)
+
    end,
 }
--- local lsp_installer = require("nvim-lsp-installer")
--- lsp_installer.on_server_ready(function(server)
---    local opts = {}
-
---    if server.name == "lua_ls" or server.name == "sumeko_lua" then
---       opts = {
---          settings = {
---             Lua = {
---                diagnostics = {
---                   globals = { 'vim' }
---                },
---                workspace = {
---                   -- Make the server aware of Neovim runtime files
---                   -- library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true}
---                }
---             }
---          }
---       }
---    end
---    server:setup(opts)
--- end)
-
