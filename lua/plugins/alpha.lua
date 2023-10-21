@@ -22,14 +22,15 @@ return {
       dashboard.section.buttons.val = {
          dashboard.button("e", "  New file",        ":ene <BAR> startinsert <CR>"),
          dashboard.button(".", "📂 Recent files",    ":Telescope oldfiles <CR>"),
-         dashboard.button("q", "  Quit NVIM",       ":qa<CR>"),
+         dashboard.button("q", "🚪 Quit NVIM",       ":qa<CR>"),
          dashboard.button("-", "------------------------------------------------", ":<CR>"),
-         dashboard.button("v", "  Nvim config",     ":Telescope fd cwd=$XDG_CONFIG_HOME/nvim/ <CR>"),
-         dashboard.button("z", "  Zshrc",           ":e $XDG_CONFIG_HOME/zsh/.zshrc <CR>"),
-         dashboard.button("a", "  Awesome config",  ":e $XDG_CONFIG_HOME/awesome/rc.lua <CR>"),
-         dashboard.button("c", "  Config files",    ":e $XDG_CONFIG_HOME/ <CR>"),
-         dashboard.button("n", "ﴬ  Notes",           ":Telescope fd cwd=$HOME/notes <CR>"),
-         dashboard.button("s", "  Scripts",         ":Telescope fd cwd=$HOME/scripts/ <CR>"),
+         dashboard.button("v", "  Nvim config",     ":Telescope fd cwd=$HOME/.config/nvim/ <CR>"),
+         dashboard.button("l", "📓 Lectures",    ":Neotree $HOME/Studia/ <CR>"),
+         -- dashboard.button("z", "  Zshrc",           ":e $XDG_CONFIG_HOME/zsh/.zshrc <CR>"),
+         -- dashboard.button("a", "  Awesome config",  ":e $XDG_CONFIG_HOME/awesome/rc.lua <CR>"),
+         dashboard.button("c", "  Config files",    ":e $HOME/.config/ <CR>"),
+         -- dashboard.button("n", "ﴬ  Notes",           ":Telescope fd cwd=$HOME/notes <CR>"),
+         -- dashboard.button("s", "  Scripts",         ":Telescope fd cwd=$HOME/scripts/ <CR>"),
          dashboard.button("r", "🦀 Rust projects",   ":Telescope find_files find_command=rg,--ignore,--files,--glob=main.rs cwd=$HOME/code/rust/ <CR>"),
       }
 

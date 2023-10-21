@@ -25,9 +25,9 @@ return {
    'sainnhe/sonokai',
    'joshdick/onedark.vim',
    'rafalbromirski/vim-aurora',
-   {
-      "iamcco/markdown-preview.nvim",
-      build = function() vim.fn["mkdp#util#install"]() end,
-   },
+   -- {
+   --    "iamcco/markdown-preview.nvim",
+   --    build = function() vim.fn["mkdp#util#install"]() end,
+   -- },
 }
 

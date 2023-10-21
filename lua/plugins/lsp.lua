@@ -41,16 +41,6 @@ return {
 
             }
          end
-         if server.name == "arduino-language-server" then
-            cmd = {
-               "arduino-language-server",
-               "-cli-config", "/home/haciek/.arduino15/arduino-cli.yaml",
-               "-fqbn", "arduino:uvr:uno",
-               "-cli", "/usr/bin/arduino-cli",
-               "-clangd", "/usr/bin/clangd"
-            }
-         end
-
          server:setup(opts)
       end)
 
