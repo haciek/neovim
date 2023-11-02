@@ -116,9 +116,15 @@ return {
       require('lspconfig')['tsserver'].setup {
          capabilities = capabilities
       }
-      require('lspconfig')['arduino_language_server'].setup {
+      require('lspconfig')['pyright'].setup {
          capabilities = capabilities
       }
 
+      require('lspconfig')['html'].setup {
+         capabilities = capabilities
+      }
+      require('lspconfig')['eslint'].setup {
+         capabilities = capabilities
+      }
    end
 }

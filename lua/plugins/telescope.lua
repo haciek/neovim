@@ -13,7 +13,7 @@ return {
       { '<leader>s', '<cmd>Telescope symbols<CR>',                   desc = 'Telescope'},
    },
    dependencies = {
-      'kyazdani42/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons',
       'nvim-telescope/telescope-fzy-native.nvim',
       'nvim-telescope/telescope-symbols.nvim',
       'nvim-lua/plenary.nvim',
